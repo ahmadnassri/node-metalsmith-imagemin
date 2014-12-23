@@ -30,7 +30,7 @@
   Pass `options` to the imagemin plugin and pass it to Metalsmith with the `use` method:
 
 ```js
-var markdown = require('metalsmith-imagemin');
+var imagemin = require('metalsmith-imagemin');
 
 metalsmith.use(imagemin({
   optimizationLevel: 3,
