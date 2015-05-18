@@ -18,7 +18,6 @@ function minify (options, files, file, done) {
     .src(files[file].contents)
     .use(Imagemin.jpegtran(options))
     .use(Imagemin.gifsicle(options))
-    .use(Imagemin.pngquant(options))
     .use(Imagemin.optipng(options))
     .use(Imagemin.svgo({ plugins: options.svgoPlugins || [] }))
 
