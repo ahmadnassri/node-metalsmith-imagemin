@@ -1,8 +1,8 @@
 'use strict'
 
+var async = require('async')
 var debug = require('debug')('metalsmith-Imagemin')
 var Imagemin = require('imagemin')
-var async = require('async')
 var path = require('path')
 
 function minify (options, files, file, done) {
@@ -18,7 +18,6 @@ function minify (options, files, file, done) {
     .src(files[file].contents)
     .use(Imagemin.jpegtran(options))
     .use(Imagemin.gifsicle(options))
-    .use(Imagemin.pngquant(options))
     .use(Imagemin.optipng(options))
     .use(Imagemin.svgo({ plugins: options.svgoPlugins || [] }))
 
