@@ -1,26 +1,26 @@
-/* global beforeEach, describe, it */
+/* global describe, it */
 
 'use strict'
 
 var assert = require('assert')
-var async = require('async')
 var fs = require('fs')
 var imagemin = require('..')
-var Metalsmith = require('metalsmith')
-
-beforeEach(function (done) {
-  Metalsmith('test/fixtures').use(imagemin()).build(done)
-})
+var async = require('async')
 
 describe('metalsmith-markdown', function () {
-  async.each(['gif', 'png', 'jpg'], function (ext, done) {
+  async.each(['gif', 'png', 'jpg'], function (ext) {
     it('should minify ' + ext, function (done) {
-      var actual = fs.statSync('test/fixtures/build/test.' + ext).size
-      var original = fs.statSync('test/fixtures/src/test.' + ext).size
+      var file = 'test/fixtures/test.' + ext
+      var files = {}
+      files[file] = { contents: fs.readFileSync(file) }
 
-      assert.ok(actual < original, 'minify ' + ext)
+      imagemin()(files, null, function () {
+        var original = fs.statSync(file).size
 
-      done()
+        assert.ok(files[file].contents.length < original, file)
+
+        done()
+      })
     })
   })
 })
