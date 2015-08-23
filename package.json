@@ -6,7 +6,7 @@
   "homepage": "https://github.com/ahmadnassri/metalsmith-imagemin",
   "repository": "ahmadnassri/metalsmith-imagemin",
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "keywords": [
     "compress",
     "gif",
@@ -21,7 +21,7 @@
     "node": ">=0.10"
   },
   "files": [
-    "src"
+    "lib"
   ],
   "bugs": {
     "url": "https://github.com/ahmadnassri/metalsmith-imagemin/issues"
@@ -40,15 +40,15 @@
     ]
   },
   "devDependencies": {
-    "codeclimate-test-reporter": "0.0.4",
-    "echint": "^1.1.1",
-    "istanbul": "^0.3.14",
-    "metalsmith": "^1.7.0",
+    "codeclimate-test-reporter": "0.1.0",
+    "echint": "^1.5.0",
+    "istanbul": "^0.3.18",
+    "metalsmith": "^2.0.1",
     "mocha": "^2.2.5",
-    "standard": "^3.11.1"
+    "standard": "^5.1.0"
   },
   "dependencies": {
-    "async": "^1.0.0",
+    "async": "^1.4.2",
     "debug": "^2.2.0",
     "imagemin": "^3.2.0"
   }
