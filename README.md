@@ -25,8 +25,7 @@ var imagemin = require('metalsmith-imagemin');
 var metalsmith = new Metalsmith(__dirname)
   .use(imagemin({
     optimizationLevel: 3,
-    svgoPlugins: [{ removeViewBox: false }],
-    use: [mozjpeg()]
+    svgoPlugins: [{ removeViewBox: false }]
   }))
 ```
 
