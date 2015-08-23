@@ -22,7 +22,9 @@ function minify (options, files, file, done) {
     .use(Imagemin.svgo({ plugins: options.svgoPlugins || [] }))
 
   if (options.use) {
-    options.use.forEach(Imagemin.use.bind(min))
+    options.use.forEach(function (plugin) {
+      min.use(plugin)
+    })
   }
 
   min.run(function (err, results) {
