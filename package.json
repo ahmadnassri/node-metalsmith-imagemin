@@ -43,7 +43,7 @@
     "codeclimate-test-reporter": "0.3.2",
     "echint": "^1.5.0",
     "istanbul": "^0.3.18",
-    "mocha": "^2.2.5",
+    "mocha": "^2.5.0",
     "standard": "^7.1.2"
   },
   "dependencies": {
