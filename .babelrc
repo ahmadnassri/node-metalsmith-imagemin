@@ -6,7 +6,7 @@
     },
     "es2015": {
       "presets": ["es2015"],
-      "plugins": ["babel-plugin-add-module-exports", "transform-runtime", "babel-plugin-transform-object-assign"]
+      "plugins": ["babel-plugin-add-module-exports", "transform-runtime"]
     },
     "node4": {
       "presets": ["es2015-node4"],
