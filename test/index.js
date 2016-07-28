@@ -1,5 +1,5 @@
 import fs from 'fs'
-import imagemin from '..'
+import imagemin from '../src/index'
 import Metalsmith from 'metalsmith'
 import rimraf from 'rimraf'
 import { test } from 'tap'
