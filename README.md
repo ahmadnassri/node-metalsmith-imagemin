@@ -11,7 +11,40 @@
 ## Install
 
 ```sh
-npm install --save metalsmith-imagemin
+npm install --production --save metalsmith-imagemin
+```
+
+## Usage
+
+I reccomend using an optimized build matching your Node.js environment version, otherwise, the standard `require` would work just fine.
+
+```js
+/*
+ * Node 6
+ * Built using `babel-preset-es2015-node6`
+ */
+const imagemin = require('metalsmith-imagemin/lib/node6')
+
+/*
+ * Node 5
+ * Built using `babel-preset-es2015-node5`
+ */
+const imagemin = require('metalsmith-imagemin/lib/node5')
+
+/*
+ * Node 4
+ * Built using `babel-preset-es2015-node4`
+ */
+const imagemin = require('metalsmith-imagemin/lib/node4')
+
+/*
+ * Node >=0.10 <=0.12
+ * Built using `babel-preset-es2015`
+ * Note: 
+ *   - additional package is required: `babel-runtime`
+ *   - npm install --save babel-runtime
+ */
+var imagemin = require('metalsmith-imagemin')
 ```
 
 ## API
@@ -19,48 +52,48 @@ npm install --save metalsmith-imagemin
 Pass `options` to the imagemin plugin and pass it to Metalsmith with the `use` method:
 
 ```js
-var Metalsmith = require('metalsmith')
-var imagemin = require('metalsmith-imagemin');
+const Metalsmith from 'metalsmith'
+const imagemin from 'metalsmith-imagemin'
 
-var metalsmith = new Metalsmith(__dirname)
-  .use(imagemin({
-    optimizationLevel: 3,
-    svgoPlugins: [{ removeViewBox: false }]
-  }))
+const options = {
+  gifsicle: {},
+  jpegrecompress: { quality: 'medium' },
+  pngquant: { quality: '65-80' },
+  svgo: {}
+}
+
+let metalsmith = new Metalsmith(__dirname)
+  .use(imagemin(options))
 ```
+
+### Options
+
+The options Object, is a `name` => `options` key map to imagemin [plugins](https://www.npmjs.com/browse/keyword/imageminplugin) by name, and their respective options.
 
 ## CLI
 
-You can also use the plugin with the Metalsmith CLI by adding `metalsmith-imagemin` key to your `metalsmith.json` plugins with any [imagemin](https://github.com/imagemin/imagemin) options you want, like so:
+You can also use the plugin with the Metalsmith CLI by adding `metalsmith-imagemin` key to your `metalsmith.json` plugins with any [imagemin](https://github.com/imagemin/imagemin) plugins / options you want, like so:
 
 ```json
 {
   "plugins": {
     "metalsmith-imagemin": {
-        "optimizationLevel": 3,
-        "svgoPlugins": [{
-          "removeViewBox": false
-        }]
-      },
+      "gifsicle": {},
+      "jpegrecompress": { "quality": "medium" },
+      "pngquant": { "quality": "65-80" },
+      "svgo": {}
     }
   }
 }
 ```
 
-## Support
+----
+> :copyright: [www.ahmadnassri.com](https://www.ahmadnassri.com/) &nbsp;&middot;&nbsp;
+> License: [ISC](LICENSE) &nbsp;&middot;&nbsp;
+> Github: [@ahmadnassri](https://github.com/ahmadnassri) &nbsp;&middot;&nbsp;
+> Twitter: [@ahmadnassri](https://twitter.com/ahmadnassri)
 
-Donations are welcome to help support the continuous development of this project.
-
-[![Gratipay][gratipay-image]][gratipay-url]
-[![PayPal][paypal-image]][paypal-url]
-[![Flattr][flattr-image]][flattr-url]
-[![Bitcoin][bitcoin-image]][bitcoin-url]
-
-## License
-
-[MIT](LICENSE) &copy; [Max Bareiss](https://github.com/MaxBareiss), [Ahmad Nassri](https://www.ahmadnassri.com)
-
-[license-url]: https://github.com/ahmadnassri/metalsmith-imagemin/blob/master/LICENSE
+[license-url]: http://choosealicense.com/licenses/isc/
 
 [travis-url]: https://travis-ci.org/ahmadnassri/metalsmith-imagemin
 [travis-image]: https://img.shields.io/travis/ahmadnassri/metalsmith-imagemin.svg?style=flat-square
@@ -76,15 +109,3 @@ Donations are welcome to help support the continuous development of this project
 
 [david-url]: https://david-dm.org/ahmadnassri/metalsmith-imagemin
 [david-image]: https://img.shields.io/david/ahmadnassri/metalsmith-imagemin.svg?style=flat-square
-
-[gratipay-url]: https://www.gratipay.com/ahmadnassri/
-[gratipay-image]: https://img.shields.io/gratipay/ahmadnassri.svg?style=flat-square
-
-[paypal-url]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UJ2B2BTK9VLRS&on0=project&os0=metalsmith-imagemin
-[paypal-image]: http://img.shields.io/badge/paypal-donate-green.svg?style=flat-square
-
-[flattr-url]: https://flattr.com/submit/auto?user_id=ahmadnassri&url=https://github.com/ahmadnassri/metalsmith-imagemin&title=metalsmith-imagemin&language=&tags=github&category=software
-[flattr-image]: http://img.shields.io/badge/flattr-donate-green.svg?style=flat-square
-
-[bitcoin-image]: http://img.shields.io/badge/bitcoin-1Nb46sZRVG3or7pNaDjthcGJpWhvoPpCxy-green.svg?style=flat-square
-[bitcoin-url]: https://www.coinbase.com/checkouts/ae383ae6bb931a2fa5ad11cec115191e?name=metalsmith-imagemin
