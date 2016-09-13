@@ -76,7 +76,7 @@
     "semantic-release": "^4.3.5",
     "standard": "^8.0.0",
     "tap": "^7.0.0",
-    "tap-mocha-reporter": "2.0.1"
+    "tap-mocha-reporter": "3.0.0"
   },
   "dependencies": {
     "imagemin": "^5.2.2",
