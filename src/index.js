@@ -61,16 +61,16 @@ export default function (options = defaults) {
     Promise.all(
       Object.keys(files)
 
-      .filter(file => /\.gif|\.png|\.svg|\.jpg|\.jpeg/.test(path.extname(file)))
+      .filter((file) => /\.gif|\.png|\.svg|\.jpg|\.jpeg/.test(path.extname(file)))
 
-      .map(file => {
+      .map((file) => {
         return imagemin
           .buffer(files[file].contents, { plugins: activePlugins })
-          .then(result => (files[file].contents = result))
+          .then((result) => (files[file].contents = result))
       })
     )
 
-    .then(results => done(null, results))
-    .catch(err => done(null, err))
+    .then((results) => done(null, results))
+    .catch((err) => done(null, err))
   }
 }

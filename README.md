@@ -1,50 +1,40 @@
 # Metalsmith Imagemin [![version][npm-version]][npm-url] [![License][npm-license]][license-url]
 
-[Metalsmith](http://www.metalsmith.io/) plugin to minify images.
+> [Metalsmith](http://www.metalsmith.io/) plugin to minify images.
 
 [![Build Status][travis-image]][travis-url]
 [![Downloads][npm-downloads]][npm-url]
 [![Code Climate][codeclimate-quality]][codeclimate-url]
 [![Coverage Status][codeclimate-coverage]][codeclimate-url]
+[![Dependency Status][dependencyci-image]][dependencyci-url]
 [![Dependencies][david-image]][david-url]
 
 ## Install
 
-```sh
+```bash
 npm install --production --save metalsmith-imagemin
 ```
 
 ## Usage
 
-I recommend using an optimized build matching your Node.js environment version, otherwise, the standard `require` would work just fine.
+I recommend using an optimized build matching your Node.js environment version, otherwise, the standard `require` would work just fine with any version of Node `>= v4.0` .
 
 ```js
 /*
+ * Node 7
+ */
+const metalsmith-imagemin = require('metalsmith-imagemin/lib/node7')
+
+/*
  * Node 6
- * Built using `babel-preset-es2015-node6`
  */
-const imagemin = require('metalsmith-imagemin/lib/node6')
+const metalsmith-imagemin = require('metalsmith-imagemin/lib/node6')
 
 /*
- * Node 5
- * Built using `babel-preset-es2015-node5`
+ * Node 4 (Default)
+ * Note: additional ES2015 polyfills may be required
  */
-const imagemin = require('metalsmith-imagemin/lib/node5')
-
-/*
- * Node 4
- * Built using `babel-preset-es2015-node4`
- */
-const imagemin = require('metalsmith-imagemin/lib/node4')
-
-/*
- * Node >=0.10 <=0.12
- * Built using `babel-preset-es2015`
- * Note: 
- *   - additional package is required: `babel-runtime`
- *   - npm install --save babel-runtime
- */
-var imagemin = require('metalsmith-imagemin')
+var metalsmith-imagemin = require('metalsmith-imagemin')
 ```
 
 ## API
@@ -52,44 +42,37 @@ var imagemin = require('metalsmith-imagemin')
 Pass `options` to the imagemin plugin and pass it to Metalsmith with the `use` method:
 
 ```js
-const Metalsmith from 'metalsmith'
-const imagemin from 'metalsmith-imagemin'
+var Metalsmith = require('metalsmith')
+var imagemin = require('metalsmith-imagemin');
 
-const options = {
-  gifsicle: {},
-  jpegrecompress: { quality: 'medium' },
-  pngquant: { quality: '65-80' },
-  svgo: {}
-}
-
-let metalsmith = new Metalsmith(__dirname)
-  .use(imagemin(options))
+var metalsmith = new Metalsmith(__dirname)
+  .use(imagemin({
+    optimizationLevel: 3,
+    svgoPlugins: [{ removeViewBox: false }]
+  }))
 ```
-
-### Options
-
-The options Object, is a `name` => `options` key map to imagemin [plugins](https://www.npmjs.com/browse/keyword/imageminplugin) by name, and their respective options.
 
 ## CLI
 
-You can also use the plugin with the Metalsmith CLI by adding `metalsmith-imagemin` key to your `metalsmith.json` plugins with any [imagemin](https://github.com/imagemin/imagemin) plugins / options you want, like so:
+You can also use the plugin with the Metalsmith CLI by adding `metalsmith-imagemin` key to your `metalsmith.json` plugins with any [imagemin](https://github.com/imagemin/imagemin) options you want, like so:
 
 ```json
 {
   "plugins": {
     "metalsmith-imagemin": {
-      "gifsicle": {},
-      "jpegrecompress": { "quality": "medium" },
-      "pngquant": { "quality": "65-80" },
-      "svgo": {}
+        "optimizationLevel": 3,
+        "svgoPlugins": [{
+          "removeViewBox": false
+        }]
+      },
     }
   }
 }
 ```
 
 ----
-> :copyright: [www.ahmadnassri.com](https://www.ahmadnassri.com/) &nbsp;&middot;&nbsp;
-> License: [ISC](LICENSE) &nbsp;&middot;&nbsp;
+> :copyright: [ahmadnassri.com](https://www.ahmadnassri.com/) &nbsp;&middot;&nbsp;
+> License: [ISC][license-url] &nbsp;&middot;&nbsp;
 > Github: [@ahmadnassri](https://github.com/ahmadnassri) &nbsp;&middot;&nbsp;
 > Twitter: [@ahmadnassri](https://twitter.com/ahmadnassri)
 
@@ -109,3 +92,6 @@ You can also use the plugin with the Metalsmith CLI by adding `metalsmith-imagem
 
 [david-url]: https://david-dm.org/ahmadnassri/metalsmith-imagemin
 [david-image]: https://img.shields.io/david/ahmadnassri/metalsmith-imagemin.svg?style=flat-square
+
+[dependencyci-url]: https://dependencyci.com/github/ahmadnassri/metalsmith-imagemin
+[dependencyci-image]: https://dependencyci.com/github/ahmadnassri/metalsmith-imagemin/badge?style=flat-square
