@@ -12,7 +12,7 @@
 ## Install
 
 ```bash
-npm install --production --save metalsmith-imagemin
+npm install --only=production --save metalsmith-imagemin
 ```
 
 ## Usage
