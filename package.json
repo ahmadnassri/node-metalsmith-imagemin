@@ -24,49 +24,28 @@
     "node": ">=4"
   },
   "files": [
-    "lib",
-    "src"
+    "lib"
   ],
   "bugs": {
     "url": "https://github.com/ahmadnassri/metalsmith-imagemin/issues"
   },
   "scripts": {
-    "compile": "babel -q src",
-    "test": "BABEL_ENV=test tap test/*.js --reporter spec --node-arg=--require --node-arg=babel-register",
-    "pretest": "snazzy && echint",
-    "coverage": "BABEL_ENV=test tap test/*.js --reporter silent --coverage --nyc-arg=--require --nyc-arg=babel-register",
-    "codeclimate": "BABEL_ENV=test tap --coverage-report=text-lcov | codeclimate-test-reporter",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
-  },
-  "standard": {
-    "ignore": [
-      "lib/**"
-    ]
+    "lint": "standard && echint",
+    "pretest": "npm run lint",
+    "test": "tap test",
+    "coverage": "tap test --reporter silent --coverage"
   },
   "echint": {
     "ignore": [
-      "test/**/*[.jpg,.png,.gif,.ico]",
-      "lib/**"
+      "test/fixtures/**"
     ]
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
   "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-env": "0.0.9",
-    "babel-register": "^6.18.0",
-    "codeclimate-test-reporter": "^0.4.0",
-    "cz-conventional-changelog": "^1.2.0",
-    "echint": "^2.1.0",
+    "echint": "^4.0.1",
     "metalsmith": "^2.3.0",
     "rimraf": "^2.5.4",
-    "semantic-release": "^6.3.2",
-    "snazzy": "^5.0.0",
-    "tap": "^8.0.1"
+    "standard": "^9.0.2",
+    "tap": "^10.3.0"
   },
   "dependencies": {
     "imagemin": "^5.2.2",

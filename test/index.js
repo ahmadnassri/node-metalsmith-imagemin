@@ -1,13 +1,15 @@
-import fs from 'fs'
-import imagemin from '../src/index'
-import Metalsmith from 'metalsmith'
-import rimraf from 'rimraf'
-import { test } from 'tap'
+'use strict'
+
+const fs = require('fs')
+const imagemin = require('..')
+const Metalsmith = require('metalsmith')
+const rimraf = require('rimraf')
+const tap = require('tap')
 
 const extentions = ['gif', 'png', 'svg', 'jpg']
 
 extentions.forEach(ext => {
-  test(`should minify ${ext}`, assert => {
+  tap.test(`should minify ${ext}`, assert => {
     assert.plan(2)
 
     let files = {}
@@ -23,7 +25,7 @@ extentions.forEach(ext => {
   })
 })
 
-test('should not compress corrupted file', assert => {
+tap.test('should not compress corrupted file', assert => {
   assert.plan(2)
 
   let files = {}
@@ -38,7 +40,7 @@ test('should not compress corrupted file', assert => {
   })
 })
 
-test('should process a folder', assert => {
+tap.test('should process a folder', assert => {
   assert.plan(5)
 
   let smith = new Metalsmith('test/fixtures')
