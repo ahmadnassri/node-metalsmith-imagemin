@@ -15,6 +15,11 @@
 npm install --only=production --save metalsmith-imagemin
 ```
 
+## Available plugins
+
+See [index.js](https://github.com/ahmadnassri/metalsmith-imagemin/blob/master/lib/index.js) in original Github repository or [index.js](https://github.com/firyx/metalsmith-imagemin/blob/master/lib/index.js) in forked/fixed repository
+or \node_modules\metalsmith-imagemin\lib\index.js locally for available installed plugins and defaults.
+
 ## API
 
 Pass `options` to the imagemin plugin and pass it to Metalsmith with the `use` method:
@@ -27,6 +32,51 @@ const metalsmith = new Metalsmith(__dirname)
   .use(imagemin({
     optimizationLevel: 3,
     svgoPlugins: [{ removeViewBox: false }]
+  }))
+```
+
+### To configure a plugin:
+
+```js
+const Metalsmith = require('metalsmith')
+const imagemin = require('metalsmith-imagemin');
+
+const metalsmith = new Metalsmith(__dirname)
+  .use(imagemin({
+    optimizationLevel: 3,
+    svgoPlugins: [{ removeViewBox: false }],
+    
+    jpegrecompress: { quality: 'veryhigh' }
+  }))
+```
+
+### To disable a default plugin (jpegrecompress) and replace it with another (mozjpeg)
+
+```js
+const Metalsmith = require('metalsmith')
+const imagemin = require('metalsmith-imagemin');
+
+const metalsmith = new Metalsmith(__dirname)
+  .use(imagemin({
+    optimizationLevel: 3,
+    svgoPlugins: [{ removeViewBox: false }],
+    
+    jpegrecompress: null,
+    mozjpeg: {}
+  }))
+```
+
+### To disable all default options
+
+```js
+const Metalsmith = require('metalsmith')
+const imagemin = require('metalsmith-imagemin');
+
+const metalsmith = new Metalsmith(__dirname)
+  .use(imagemin({
+    disableDefaults: true,
+    
+    mozjpeg: {}
   }))
 ```
 
