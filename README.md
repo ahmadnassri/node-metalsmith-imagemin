@@ -36,7 +36,7 @@ const metalsmith = new Metalsmith(__dirname)
 
 ### To configure plugin
 
-Default jpegrecompress options will be overwritten:
+Default `jpegrecompress` options will be overwritten:
 
 ```js
 const Metalsmith = require('metalsmith')
