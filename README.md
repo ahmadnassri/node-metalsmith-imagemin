@@ -18,7 +18,7 @@ Pass `options` to the imagemin plugin and pass it to Metalsmith with the `use` m
 
 ```js
 const Metalsmith = require('metalsmith')
-const imagemin = require('metalsmith-imagemin');
+const imagemin = require('metalsmith-imagemin')
 
 const metalsmith = new Metalsmith(__dirname)
   .use(imagemin({
@@ -33,13 +33,13 @@ Default `jpegrecompress` options will be overwritten:
 
 ```js
 const Metalsmith = require('metalsmith')
-const imagemin = require('metalsmith-imagemin');
+const imagemin = require('metalsmith-imagemin')
 
 const metalsmith = new Metalsmith(__dirname)
   .use(imagemin({
     optimizationLevel: 3,
     svgoPlugins: [{ removeViewBox: false }],
-    
+
     jpegrecompress: { quality: 'veryhigh' }
   }))
 ```
@@ -54,13 +54,13 @@ E.g. disable default `jpegrecompress` and replace it with another plugin (`mozjp
 
 ```js
 const Metalsmith = require('metalsmith')
-const imagemin = require('metalsmith-imagemin');
+const imagemin = require('metalsmith-imagemin')
 
 const metalsmith = new Metalsmith(__dirname)
   .use(imagemin({
     optimizationLevel: 3,
     svgoPlugins: [{ removeViewBox: false }],
-    
+
     jpegrecompress: null,
     mozjpeg: {}
   }))
