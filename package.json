@@ -33,7 +33,7 @@
     "pretest": "npm run test:codeclimate",
     "test": "npm run test:tap",
     "test:codeclimate": ".scripts/codeclimate analyze",
-    "test:tap": "tap test --100 --coverage-report=lcov --no-browser",
+    "test:tap": "tap test --coverage-report=lcov --no-browser",
     "coverage": "opener coverage/lcov-report/index.html"
   },
   "devDependencies": {

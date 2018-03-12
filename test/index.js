@@ -1,5 +1,3 @@
-'use strict'
-
 const fs = require('fs')
 const imagemin = require('..')
 const Metalsmith = require('metalsmith')
@@ -51,7 +49,8 @@ tap.test('should process a folder', assert => {
     assert.equal(err, null, 'does not throw errors')
 
     extentions.forEach(ext => {
-      fs.exists(`test/fixtures/build/test.${ext}`, exists => assert.ok(exists, `processed ${ext} succesfully`))
+      const exists = fs.existsSync(`test/fixtures/build/test.${ext}`)
+      assert.ok(exists, `processed ${ext} succesfully`)
     })
 
     rimraf('test/fixtures/build', assert.end)

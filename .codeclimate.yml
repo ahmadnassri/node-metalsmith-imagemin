@@ -1,5 +1,10 @@
 version: "2"
 
+checks:
+  method-lines:
+    config:
+      threshold: 40
+
 plugins:
   duplication:
     enabled: true
@@ -8,9 +13,6 @@ plugins:
         javascript:
           patterns:
             - test/*.js
-
-  csslint:
-    enabled: true
 
   eslint:
     enabled: true
@@ -22,9 +24,6 @@ plugins:
     enabled: true
 
   markdownlint:
-    enabled: true
-
-  shellcheck:
     enabled: true
 
   editorconfig:
