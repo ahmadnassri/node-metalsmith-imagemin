@@ -21,7 +21,7 @@
     "png"
   ],
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   },
   "files": [
     "lib"
@@ -30,39 +30,33 @@
     "url": "https://github.com/ahmadnassri/metalsmith-imagemin/issues"
   },
   "scripts": {
-    "lint": "standard && echint",
-    "pretest": "npm run lint",
-    "test": "tap test",
-    "coverage": "tap test --reporter silent --coverage"
-  },
-  "echint": {
-    "ignore": [
-      "test/fixtures/**"
-    ]
+    "pretest": "npm run test:codeclimate",
+    "test": "npm run test:tap",
+    "test:codeclimate": ".scripts/codeclimate analyze",
+    "test:tap": "tap test --100 --coverage-report=lcov --no-browser",
+    "coverage": "opener coverage/lcov-report/index.html"
   },
   "devDependencies": {
-    "echint": "^4.0.1",
     "metalsmith": "^2.3.0",
-    "rimraf": "^2.5.4",
-    "standard": "^9.0.2",
-    "tap": "^10.3.0"
+    "rimraf": "^2.6.2",
+    "tap": "^11.1.2"
   },
   "dependencies": {
-    "imagemin": "^5.2.2",
-    "imagemin-advpng": "^3.1.0",
+    "imagemin": "^5.3.1",
+    "imagemin-advpng": "^4.0.0",
     "imagemin-giflossy": "^5.1.10",
-    "imagemin-gifsicle": "^5.1.0",
-    "imagemin-gm": "^1.0.2",
+    "imagemin-gifsicle": "^5.2.0",
+    "imagemin-gm": "^2.0.0",
     "imagemin-jpeg-recompress": "^5.1.0",
-    "imagemin-jpegoptim": "^5.0.0",
+    "imagemin-jpegoptim": "^5.2.0",
     "imagemin-jpegtran": "^5.0.2",
-    "imagemin-mozjpeg": "^6.0.0",
+    "imagemin-mozjpeg": "^7.0.0",
     "imagemin-optipng": "^5.2.1",
-    "imagemin-pngcrush": "^5.0.0",
+    "imagemin-pngcrush": "^5.1.0",
     "imagemin-pngout": "^2.0.0",
-    "imagemin-pngquant": "^5.0.0",
-    "imagemin-svgo": "^5.2.0",
-    "imagemin-webp": "^4.0.0",
-    "imagemin-zopfli": "^5.0.0"
+    "imagemin-pngquant": "^5.0.1",
+    "imagemin-svgo": "^6.0.0",
+    "imagemin-webp": "^4.1.0",
+    "imagemin-zopfli": "^5.1.0"
   }
 }
