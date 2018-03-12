@@ -1,18 +1,11 @@
-# Metalsmith Imagemin [![version][npm-version]][npm-url] [![License][license-image]][license-url]
+# Metalsmith Imagemin [![version][npm-version]][npm-url] [![License][license-image]][license-url] [![Build Status][travis-image]][travis-url] [![Downloads][npm-downloads]][npm-url] [![Coverage Status][codeclimate-coverage]][codeclimate-url]
 
 > [Metalsmith](http://www.metalsmith.io/) plugin to minify images.
-
-[![Build Status][travis-image]][travis-url]
-[![Downloads][npm-downloads]][npm-url]
-[![Code Climate][codeclimate-quality]][codeclimate-url]
-[![Coverage Status][codeclimate-coverage]][codeclimate-url]
-[![Dependency Status][dependencyci-image]][dependencyci-url]
-[![Dependencies][david-image]][david-url]
 
 ## Install
 
 ```bash
-npm install --only=production --save metalsmith-imagemin
+npm install --production --save metalsmith-imagemin
 ```
 
 ## API
@@ -49,9 +42,9 @@ You can also use the plugin with the Metalsmith CLI by adding `metalsmith-imagem
 ```
 
 ---
-> :copyright: [ahmadnassri.com](https://www.ahmadnassri.com/) &nbsp;&middot;&nbsp;
-> License: [ISC][license-url] &nbsp;&middot;&nbsp;
-> Github: [@ahmadnassri](https://github.com/ahmadnassri) &nbsp;&middot;&nbsp;
+> License: [ISC][license-url] &bull; 
+> Copyright: [ahmadnassri.com](https://www.ahmadnassri.com) &bull; 
+> Github: [@ahmadnassri](https://github.com/ahmadnassri) &bull; 
 > Twitter: [@ahmadnassri](https://twitter.com/ahmadnassri)
 
 [license-url]: http://choosealicense.com/licenses/isc/
@@ -65,11 +58,4 @@ You can also use the plugin with the Metalsmith CLI by adding `metalsmith-imagem
 [npm-downloads]: https://img.shields.io/npm/dm/metalsmith-imagemin.svg?style=flat-square
 
 [codeclimate-url]: https://codeclimate.com/github/ahmadnassri/metalsmith-imagemin
-[codeclimate-quality]: https://img.shields.io/codeclimate/github/ahmadnassri/metalsmith-imagemin.svg?style=flat-square
-[codeclimate-coverage]: https://img.shields.io/codeclimate/coverage/github/ahmadnassri/metalsmith-imagemin.svg?style=flat-square
-
-[david-url]: https://david-dm.org/ahmadnassri/metalsmith-imagemin
-[david-image]: https://img.shields.io/david/ahmadnassri/metalsmith-imagemin.svg?style=flat-square
-
-[dependencyci-url]: https://dependencyci.com/github/ahmadnassri/metalsmith-imagemin
-[dependencyci-image]: https://dependencyci.com/github/ahmadnassri/metalsmith-imagemin/badge?style=flat-square
+[codeclimate-coverage]: https://api.codeclimate.com/v1/badges/93b75ed23df8226fa626/test_coverage?style=flat-square
