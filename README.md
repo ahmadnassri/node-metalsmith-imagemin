@@ -8,9 +8,25 @@
 npm install --production --save metalsmith-imagemin
 ```
 
-## Available plugins and defaults
+### Available plugins
 
-For installed plugins see index.js.
+```
+imagemin-advpng
+imagemin-giflossy
+imagemin-gifsicle
+imagemin-gm
+imagemin-jpegoptim
+imagemin-jpeg-recompress
+imagemin-jpegtran
+imagemin-mozjpeg
+imagemin-optipng
+imagemin-pngcrush
+imagemin-pngout
+imagemin-pngquant
+imagemin-svgo
+imagemin-webp
+imagemin-zopfli
+```
 
 ## API
 
@@ -46,9 +62,16 @@ const metalsmith = new Metalsmith(__dirname)
 
 ### To disable/replace a default plugin
 
-By default there are 4 plugins enabled (see index.js).
+By default there are 4 plugins enabled:
 
-To disable a default plugin use `pluginname: null`.
+```
+`gifsicle`
+`jpegrecompress`
+`pngquant`
+`svgo`
+```
+
+To disable a default plugin use `pluginname: null`, to disable **ALL** the default plugins use: `disableDefaults: true`
 
 E.g. disable default `jpegrecompress` and replace it with another plugin (`mozjpeg`):
 
