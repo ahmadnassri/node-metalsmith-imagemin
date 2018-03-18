@@ -65,10 +65,10 @@ const metalsmith = new Metalsmith(__dirname)
 By default there are 4 plugins enabled:
 
 ```
-`gifsicle`
-`jpegrecompress`
-`pngquant`
-`svgo`
+gifsicle
+jpegrecompress
+pngquant
+svgo
 ```
 
 To disable a default plugin use `pluginname: null`, to disable **ALL** the default plugins use: `disableDefaults: true`
