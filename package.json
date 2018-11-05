@@ -30,11 +30,13 @@
     "url": "https://github.com/ahmadnassri/metalsmith-imagemin/issues"
   },
   "scripts": {
-    "pretest": "npm run test:codeclimate",
-    "test": "npm run test:tap",
-    "test:codeclimate": ".scripts/codeclimate analyze",
-    "test:tap": "tap test --coverage-report=lcov --no-browser",
-    "coverage": "opener coverage/lcov-report/index.html"
+    "lint:deps": "npx updated",
+    "lint:ec": "npx editorconfig-checker .",
+    "lint:js": "npx eslint .",
+    "lint:md": "npx remark --quiet --frail .",
+    "lint": "npx run-p lint:*",
+    "open:coverage": "opener coverage/lcov-report/index.html",
+    "test": "tap test --100 --coverage-report=lcov --no-browser"
   },
   "devDependencies": {
     "metalsmith": "^2.3.0",

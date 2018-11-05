@@ -1,11 +1,13 @@
-# Metalsmith Imagemin [![version][npm-version]][npm-url] [![License][license-image]][license-url] [![Build Status][travis-image]][travis-url] [![Downloads][npm-downloads]][npm-url] [![Coverage Status][codeclimate-coverage]][codeclimate-url]
+# Metalsmith Imagemin
 
-> [Metalsmith](http://www.metalsmith.io/) plugin to minify images.
+[![License][license-image]][license-url] [![version][npm-image]][npm-url] [![Build Status][circle-image]][circle-url]
+
+> Metalsmith plugin to minify images.
 
 ## Install
 
 ```bash
-npm install --production --save metalsmith-imagemin
+npm install @ahmadnassri/metalsmith-imagemin
 ```
 
 ### Available plugins
@@ -108,20 +110,15 @@ You can also use the plugin with the Metalsmith CLI by adding `metalsmith-imagem
 ```
 
 ---
-> License: [ISC][license-url] &bull; 
-> Copyright: [ahmadnassri.com](https://www.ahmadnassri.com) &bull; 
+> Author: [Ahmad Nassri](https://www.ahmadnassri.com) &bull; 
 > Github: [@ahmadnassri](https://github.com/ahmadnassri) &bull; 
 > Twitter: [@ahmadnassri](https://twitter.com/ahmadnassri)
 
-[license-url]: http://choosealicense.com/licenses/isc/
-[license-image]: https://img.shields.io/github/license/ahmadnassri/metalsmith-imagemin.svg?style=flat-square
+[license-url]: LICENSE
+[license-image]: https://img.shields.io/github/license/ahmadnassri/metalsmith-imagemin.svg?style=for-the-badge&logo=circleci
 
-[travis-url]: https://travis-ci.org/ahmadnassri/metalsmith-imagemin
-[travis-image]: https://img.shields.io/travis/ahmadnassri/metalsmith-imagemin.svg?style=flat-square
+[circle-url]: https://circleci.com/gh/ahmadnassri/workflows/metalsmith-imagemin
+[circle-image]: https://img.shields.io/circleci/project/github/ahmadnassri/metalsmith-imagemin/master.svg?style=for-the-badge&logo=circleci
 
 [npm-url]: https://www.npmjs.com/package/metalsmith-imagemin
-[npm-version]: https://img.shields.io/npm/v/metalsmith-imagemin.svg?style=flat-square
-[npm-downloads]: https://img.shields.io/npm/dm/metalsmith-imagemin.svg?style=flat-square
-
-[codeclimate-url]: https://codeclimate.com/github/ahmadnassri/metalsmith-imagemin
-[codeclimate-coverage]: https://api.codeclimate.com/v1/badges/93b75ed23df8226fa626/test_coverage?style=flat-square
+[npm-image]: https://img.shields.io/npm/v/metalsmith-imagemin.svg?style=for-the-badge&logo=npm
