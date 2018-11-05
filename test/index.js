@@ -4,7 +4,7 @@ const Metalsmith = require('metalsmith')
 const rimraf = require('rimraf')
 const tap = require('tap')
 
-const extentions = ['gif', 'png', 'svg', 'jpg']
+const extentions = ['png', 'svg', 'jpg']
 
 extentions.forEach(ext => {
   tap.test(`should minify ${ext}`, assert => {
@@ -39,7 +39,7 @@ tap.test('should not compress corrupted file', assert => {
 })
 
 tap.test('should process a folder', assert => {
-  assert.plan(5)
+  assert.plan(4)
 
   let smith = new Metalsmith('test/fixtures')
 
