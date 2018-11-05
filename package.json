@@ -36,7 +36,7 @@
     "lint:md": "npx remark --quiet --frail .",
     "lint": "npx run-p lint:*",
     "open:coverage": "opener coverage/lcov-report/index.html",
-    "test": "tap test --100 --coverage-report=lcov --no-browser"
+    "test": "tap test --coverage-report=lcov --no-browser"
   },
   "devDependencies": {
     "metalsmith": "^2.3.0",
