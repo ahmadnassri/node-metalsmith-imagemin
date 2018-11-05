@@ -51,7 +51,7 @@
     "imagemin-jpegoptim": "^5.2.0",
     "imagemin-jpegtran": "^5.0.2",
     "imagemin-mozjpeg": "^7.0.0",
-    "imagemin-optipng": "^5.2.1",
+    "imagemin-optipng": "^6.0.0",
     "imagemin-pngcrush": "^5.1.0",
     "imagemin-pngout": "^4.0.0",
     "imagemin-pngquant": "^5.1.0",
