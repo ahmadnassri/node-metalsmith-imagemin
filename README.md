@@ -12,7 +12,7 @@ npm install @ahmadnassri/metalsmith-imagemin
 
 ### Available plugins
 
-```
+```plain
 imagemin-advpng
 imagemin-giflossy
 imagemin-gifsicle
@@ -66,7 +66,7 @@ const metalsmith = new Metalsmith(__dirname)
 
 By default there are 4 plugins enabled:
 
-```
+```plain
 gifsicle
 jpegrecompress
 pngquant
