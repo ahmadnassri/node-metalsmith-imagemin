@@ -5,6 +5,6 @@ LABEL maintainer="Ahmad Nassri <email@ahmadnassri.com>"
 
 USER root
 
-RUN apk add --update --no-cache zlib-dev nasm autoconf automake
+RUN apk add --update --no-cache zlib-dev nasm autoconf automake libtool libjpeg-turbo libjpeg-turbo-dev
 
 USER node
