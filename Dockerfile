@@ -5,6 +5,6 @@ LABEL maintainer="Ahmad Nassri <email@ahmadnassri.com>"
 
 USER root
 
-RUN apk add --update --no-cache zlib-dev nasm
+RUN apk add --update --no-cache zlib-dev nasm autoconf
 
 USER node
