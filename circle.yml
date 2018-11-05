@@ -3,7 +3,7 @@ version: 2.1
 executors:
   builder:
     docker:
-      - image: ahmadnassri/build-essential
+      - image: ahmadnassri/imagemin-build
 
   node-6:
     docker:
