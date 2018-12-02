@@ -49,7 +49,7 @@
     "imagemin-giflossy": "^5.1.10",
     "imagemin-gifsicle": "^6.0.1",
     "imagemin-gm": "^2.0.1",
-    "imagemin-jpeg-recompress": "^5.1.0",
+    "imagemin-jpeg-recompress": "^6.0.0",
     "imagemin-jpegoptim": "^6.0.0",
     "imagemin-jpegtran": "^6.0.0",
     "imagemin-mozjpeg": "^8.0.0",
