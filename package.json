@@ -59,6 +59,6 @@
     "imagemin-pngquant": "^6.0.0",
     "imagemin-svgo": "^7.0.0",
     "imagemin-webp": "^5.0.0",
-    "imagemin-zopfli": "^5.1.0"
+    "imagemin-zopfli": "^6.0.0"
   }
 }
