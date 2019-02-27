@@ -1,5 +1,5 @@
 {
-  "version": "4.1.3",
+  "version": "4.1.4",
   "name": "metalsmith-imagemin",
   "description": "Metalsmith plugin to minify images.",
   "author": "Ahmad Nassri <ahmad@ahmadnassri.com> (https://www.ahmadnassri.com/)",
