@@ -40,11 +40,11 @@
   },
   "devDependencies": {
     "metalsmith": "^2.3.0",
-    "rimraf": "^2.6.2",
-    "tap": "^12.0.1"
+    "rimraf": "^2.6.3",
+    "tap": "^12.5.3"
   },
   "dependencies": {
-    "imagemin": "^6.0.0",
+    "imagemin": "^6.1.0",
     "imagemin-advpng": "^5.0.0",
     "imagemin-giflossy": "^5.1.10",
     "imagemin-gifsicle": "^6.0.1",
