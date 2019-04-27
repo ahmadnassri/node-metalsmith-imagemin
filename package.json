@@ -41,7 +41,7 @@
   "devDependencies": {
     "metalsmith": "^2.3.0",
     "rimraf": "^2.6.3",
-    "tap": "^12.5.3"
+    "tap": "^13.0.0"
   },
   "dependencies": {
     "imagemin": "^6.1.0",
