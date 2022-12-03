@@ -1,7 +1,6 @@
 const fs = require('fs')
 const imagemin = require('..')
 const Metalsmith = require('metalsmith')
-const rimraf = require('rimraf')
 const tap = require('tap')
 
 const extentions = ['png', 'svg', 'jpg']
@@ -52,7 +51,5 @@ tap.test('should process a folder', assert => {
       const exists = fs.existsSync(`test/fixtures/build/test.${ext}`)
       assert.ok(exists, `processed ${ext} succesfully`)
     })
-
-    rimraf('test/fixtures/build', assert.end)
   })
 })
