@@ -61,5 +61,10 @@
   },
   "peerDependencies": {
     "metalsmith": "^2.5.0"
+  },
+  "overrides": {
+    "got": "^12.5.3",
+    "semver-regex": "^4.0.5",
+    "trim-newlines": "^3.0.1"
   }
 }
