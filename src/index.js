@@ -33,6 +33,7 @@ const defaults = {
 }
 
 module.exports = function (options = {}) {
+  /* istanbul ignore else */
   if (!options.disableDefaults) {
     options = { ...defaults, ...options }
   }
@@ -58,6 +59,7 @@ module.exports = function (options = {}) {
     }
 
     for (const plugin in options) {
+      /* istanbul ignore else */
       if (availablePlugins[plugin] && options[plugin] != null) {
         activePlugins.push(availablePlugins[plugin](options[plugin]))
       }
