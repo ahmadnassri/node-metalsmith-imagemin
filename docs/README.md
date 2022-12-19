@@ -1,20 +1,13 @@
-# Node Lib Template
-
-node library project template
-
-[![license][license-img]][license-url]
-[![release][release-img]][release-url]
-[![semantic][semantic-img]][semantic-url]
 
 ## Install
 
-``` bash
-npm install @ahmadnassri/metalsmith-imagemin
+```bash
+npm install metalsmith-imagemin
 ```
 
 ### Available plugins
 
-``` plain
+```plain
 imagemin-advpng
 imagemin-giflossy
 imagemin-gifsicle
@@ -36,7 +29,7 @@ imagemin-zopfli
 
 Pass `options` to the imagemin plugin and pass it to Metalsmith with the `use` method:
 
-``` js
+```js
 const Metalsmith = require('metalsmith')
 const imagemin = require('metalsmith-imagemin')
 
@@ -51,7 +44,7 @@ const metalsmith = new Metalsmith(__dirname)
 
 Default `jpegrecompress` options will be overwritten:
 
-``` js
+```js
 const Metalsmith = require('metalsmith')
 const imagemin = require('metalsmith-imagemin')
 
@@ -68,7 +61,7 @@ const metalsmith = new Metalsmith(__dirname)
 
 By default there are 4 plugins enabled:
 
-``` plain
+```plain
 gifsicle
 jpegrecompress
 pngquant
@@ -79,7 +72,7 @@ To disable a default plugin use `pluginname: null`, to disable **ALL** the defau
 
 E.g. disable default `jpegrecompress` and replace it with another plugin (`mozjpeg`):
 
-``` js
+```js
 const Metalsmith = require('metalsmith')
 const imagemin = require('metalsmith-imagemin')
 
@@ -95,9 +88,9 @@ const metalsmith = new Metalsmith(__dirname)
 
 ## CLI
 
-You can also use the plugin with the Metalsmith CLI by adding `metalsmith-imagemin` key to your `metalsmith.json` plugins with any [imagemin][] options you want, like so:
+You can also use the plugin with the Metalsmith CLI by adding `metalsmith-imagemin` key to your `metalsmith.json` plugins with any [imagemin](https://github.com/imagemin/imagemin) options you want, like so:
 
-``` json
+```json
 {
   "plugins": {
     "metalsmith-imagemin": {
@@ -110,18 +103,3 @@ You can also use the plugin with the Metalsmith CLI by adding `metalsmith-imagem
   }
 }
 ```
-
-  [imagemin]: https://github.com/imagemin/imagemin
-
-----
-> Author: [Ahmad Nassri](https://www.ahmadnassri.com/) &bull;
-> Twitter: [@AhmadNassri](https://twitter.com/AhmadNassri)
-
-[license-url]: LICENSE
-[license-img]: https://badgen.net/github/license/ahmadnassri/template-node-lib
-
-[release-url]: https://github.com/ahmadnassri/template-node-lib/releases
-[release-img]: https://badgen.net/github/release/ahmadnassri/template-node-lib
-
-[semantic-url]: https://github.com/ahmadnassri/template-node-lib/actions?query=workflow%3Arelease
-[semantic-img]: https://badgen.net/badge/📦/semantically%20released/blue

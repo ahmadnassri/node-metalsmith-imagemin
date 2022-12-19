@@ -1,0 +1,8 @@
+version: 2.0
+
+id: node-metalsmith-imagemin
+
+about:
+  title: Metalsmith Imagemin
+  description: Metalsmith plugin to minify images.
+  repository: ahmadnassri/metalsmith-imagemin
