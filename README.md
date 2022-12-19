@@ -1,6 +1,6 @@
-# Node Lib Template
+# Metalsmith Imagemin
 
-node library project template
+Metalsmith plugin to minify images.
 
 [![license][license-img]][license-url]
 [![release][release-img]][release-url]
@@ -9,7 +9,7 @@ node library project template
 ## Install
 
 ``` bash
-npm install @ahmadnassri/metalsmith-imagemin
+npm install metalsmith-imagemin
 ```
 
 ### Available plugins
@@ -101,11 +101,10 @@ You can also use the plugin with the Metalsmith CLI by adding `metalsmith-imagem
 {
   "plugins": {
     "metalsmith-imagemin": {
-        "optimizationLevel": 3,
-        "svgoPlugins": [{
-          "removeViewBox": false
-        }]
-      },
+      "optimizationLevel": 3,
+      "svgoPlugins": [{
+        "removeViewBox": false
+      }]
     }
   }
 }
@@ -118,10 +117,10 @@ You can also use the plugin with the Metalsmith CLI by adding `metalsmith-imagem
 > Twitter: [@AhmadNassri](https://twitter.com/AhmadNassri)
 
 [license-url]: LICENSE
-[license-img]: https://badgen.net/github/license/ahmadnassri/template-node-lib
+[license-img]: https://badgen.net/github/license/ahmadnassri/metalsmith-imagemin
 
-[release-url]: https://github.com/ahmadnassri/template-node-lib/releases
-[release-img]: https://badgen.net/github/release/ahmadnassri/template-node-lib
+[release-url]: https://github.com/ahmadnassri/metalsmith-imagemin/releases
+[release-img]: https://badgen.net/github/release/ahmadnassri/metalsmith-imagemin
 
-[semantic-url]: https://github.com/ahmadnassri/template-node-lib/actions?query=workflow%3Arelease
+[semantic-url]: https://github.com/ahmadnassri/metalsmith-imagemin/actions?query=workflow%3Arelease
 [semantic-img]: https://badgen.net/badge/📦/semantically%20released/blue

@@ -94,11 +94,10 @@ You can also use the plugin with the Metalsmith CLI by adding `metalsmith-imagem
 {
   "plugins": {
     "metalsmith-imagemin": {
-        "optimizationLevel": 3,
-        "svgoPlugins": [{
-          "removeViewBox": false
-        }]
-      },
+      "optimizationLevel": 3,
+      "svgoPlugins": [{
+        "removeViewBox": false
+      }]
     }
   }
 }
