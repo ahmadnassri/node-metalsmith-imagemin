@@ -4,15 +4,15 @@ const Metalsmith = require('metalsmith')
 const rimraf = require('rimraf')
 const tap = require('tap')
 
-const extentions = ['png', 'svg', 'jpg']
+const extensions = ['png', 'svg', 'jpg']
 
-extentions.forEach(ext => {
+extensions.forEach(ext => {
   tap.test(`should minify ${ext}`, assert => {
     assert.plan(2)
 
-    let files = {}
-    let file = `test/fixtures/src/test.${ext}`
-    let size = fs.statSync(file).size
+    const files = {}
+    const file = `test/fixtures/src/test.${ext}`
+    const size = fs.statSync(file).size
 
     files[file] = { contents: fs.readFileSync(file) }
 
@@ -26,9 +26,9 @@ extentions.forEach(ext => {
 tap.test('should not compress corrupted file', assert => {
   assert.plan(2)
 
-  let files = {}
-  let file = 'test/fixtures/src/test-corrupt.jpg'
-  let size = fs.statSync(file).size
+  const files = {}
+  const file = 'test/fixtures/src/test-corrupt.jpg'
+  const size = fs.statSync(file).size
 
   files[file] = { contents: fs.readFileSync(file) }
 
@@ -41,16 +41,16 @@ tap.test('should not compress corrupted file', assert => {
 tap.test('should process a folder', assert => {
   assert.plan(4)
 
-  let smith = new Metalsmith('test/fixtures')
+  const smith = new Metalsmith('test/fixtures')
 
   smith.use(imagemin())
 
   smith.build(err => {
     assert.equal(err, null, 'does not throw errors')
 
-    extentions.forEach(ext => {
+    extensions.forEach(ext => {
       const exists = fs.existsSync(`test/fixtures/build/test.${ext}`)
-      assert.ok(exists, `processed ${ext} succesfully`)
+      assert.ok(exists, `processed ${ext} successfully`)
     })
 
     rimraf('test/fixtures/build', assert.end)

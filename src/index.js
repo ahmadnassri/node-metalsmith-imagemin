@@ -39,8 +39,8 @@ module.exports = function (opts) {
   }
 
   return function (files, metalsmith, done) {
-    var activePlugins = []
-    var availablePlugins = {
+    const activePlugins = []
+    const availablePlugins = {
       advpng,
       giflossy,
       gifsicle,
@@ -58,8 +58,8 @@ module.exports = function (opts) {
       zopfli
     }
 
-    for (let plugin in options) {
-      if (availablePlugins.hasOwnProperty(plugin) && options[plugin] != null) {
+    for (const plugin in options) {
+      if (availablePlugins[plugin] && options[plugin] != null) {
         activePlugins.push(availablePlugins[plugin](options[plugin]))
       }
     }
