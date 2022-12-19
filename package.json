@@ -51,7 +51,7 @@
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-gm": "^2.0.3",
     "imagemin-jpeg-recompress": "^7.0.0",
-    "imagemin-jpegoptim": "^7.0.0",
+    "imagemin-jpegoptim": "^8.0.0",
     "imagemin-jpegtran": "^7.0.0",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",
