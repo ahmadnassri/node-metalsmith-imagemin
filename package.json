@@ -53,7 +53,7 @@
     "imagemin-jpeg-recompress": "^7.0.0",
     "imagemin-jpegoptim": "^7.0.0",
     "imagemin-jpegtran": "^7.0.0",
-    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
     "imagemin-optipng": "^8.0.0",
     "imagemin-pngcrush": "^7.0.0",
     "imagemin-pngout": "^5.0.0",
