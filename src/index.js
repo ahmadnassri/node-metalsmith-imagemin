@@ -26,16 +26,15 @@ const zopfli = require('imagemin-zopfli')
 
 const defaults = {
   gifsicle: {},
-  jpegrecompress: { quality: 'medium' },
-  pngquant: { quality: [0.6, 0.8] },
+  jpegrecompress: { quality: 'medium', strip: true },
+  pngquant: { verbose: true, strip: true, quality: [0.4, 0.6] },
+  webp: { metadata: 'none' },
   svgo: {}
 }
 
-module.exports = function (opts) {
-  let options = Object.assign({}, opts)
-
+module.exports = function (options = {}) {
   if (!options.disableDefaults) {
-    options = Object.assign(defaults, options)
+    options = { ...defaults, ...options }
   }
 
   return function (files, metalsmith, done) {
