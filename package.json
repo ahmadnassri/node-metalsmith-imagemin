@@ -46,21 +46,21 @@
   },
   "dependencies": {
     "imagemin": "^7.0.1",
-    "imagemin-advpng": "^5.0.0",
+    "imagemin-advpng": "^6.0.0",
     "imagemin-giflossy": "^5.1.10",
-    "imagemin-gifsicle": "^4.1.0",
+    "imagemin-gifsicle": "^7.0.0",
     "imagemin-gm": "^2.0.3",
     "imagemin-jpeg-recompress": "^7.0.0",
-    "imagemin-jpegoptim": "^5.1.0",
-    "imagemin-jpegtran": "^4.1.0",
-    "imagemin-mozjpeg": "^5.0.0",
-    "imagemin-optipng": "^4.2.0",
-    "imagemin-pngcrush": "^5.1.0",
+    "imagemin-jpegoptim": "^7.0.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-pngcrush": "^7.0.0",
     "imagemin-pngout": "^5.0.0",
-    "imagemin-pngquant": "^5.0.1",
+    "imagemin-pngquant": "^9.0.2",
     "imagemin-svgo": "^9.0.0",
-    "imagemin-webp": "^4.0.0",
-    "imagemin-zopfli": "^5.1.0"
+    "imagemin-webp": "^6.0.0",
+    "imagemin-zopfli": "^7.0.0"
   },
   "overrides": {
     "graceful-fs": "^4.2.10"
